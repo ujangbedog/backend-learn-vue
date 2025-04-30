@@ -1,15 +1,43 @@
 # backend-vue
 
-To install dependencies:
+This project is a backend built using Express and TypeScript.
+
+## Version
+
+1.0.0
+
+## Installation
+
+To install dependencies, run:
 
 ```bash
 bun install
 ```
 
-To run:
+## Running the Project
+
+To run the project in development mode, use:
 
 ```bash
 bun run index.ts
 ```
 
-This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+or
+
+```bash
+bun run dev
+```
+
+## To build the project, run:
+
+### Build
+
+```bash
+bun run build
+```
+
+### Run after Build
+
+```bash
+bun run start
+```
