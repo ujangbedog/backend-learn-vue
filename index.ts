@@ -9,12 +9,12 @@ app.get("/hello", (req, res) => {
 });
 
 // Port listening
-// const PORT = 3000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
-// });
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
 
 // Export handler Vercel
-export default (req, res) => {
-  app(req, res);
-};
+// export default (req, res) => {
+//   app(req, res);
+// };
