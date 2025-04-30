@@ -4,8 +4,10 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "./dist",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strict": true, // Menambahkan mode ketat untuk pemeriksaan tipe yang lebih baik
+    "skipLibCheck": true // Mengabaikan pemeriksaan tipe untuk file definisi
   },
-  "include": ["index.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts"], // Mengompilasi semua file .ts di dalam folder src
+  "exclude": ["node_modules"] // Mengecualikan folder node_modules
 }

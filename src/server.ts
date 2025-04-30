@@ -1,3 +1,6 @@
+import { Request, ParamsDictionary, Response } from "express-serve-static-core";
+import { IncomingMessage, ServerResponse } from "http";
+import { ParsedQs } from "qs";
 import app from "./app";
 
 const PORT = process.env.PORT || 3000;
@@ -15,11 +18,13 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Ekspor handler untuk Vercel
-export default async (req, res) => {
-  try {
-    await app(req, res);
-  } catch (error) {
-    console.error("Error handling request:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
+export default (
+  req:
+    | IncomingMessage
+    | Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>,
+  res:
+    | Response<any, Record<string, any>, number>
+    | ServerResponse<IncomingMessage>
+) => {
+  app(req, res);
 };
