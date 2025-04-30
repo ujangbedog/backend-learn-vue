@@ -15,6 +15,11 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Ekspor handler untuk Vercel
-export default (req, res) => {
-  app(req, res);
+export default async (req, res) => {
+  try {
+    await app(req, res);
+  } catch (error) {
+    console.error("Error handling request:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 };
