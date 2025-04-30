@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config(); // ⬅ penting
+dotenv.config();
 
 import { Request, ParamsDictionary, Response } from "express-serve-static-core";
 import { IncomingMessage, ServerResponse } from "http";
