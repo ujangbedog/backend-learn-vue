@@ -1,6 +1,6 @@
 import express from "express";
-import helloRoutes from "./routes/helloRoutes";
 import homeRoutes from "./routes/homeRoutes";
+import helloRoutes from "./routes/helloRoutes";
 import errorMiddleware from "./middlewares/errorMiddleware";
 
 const app = express();
