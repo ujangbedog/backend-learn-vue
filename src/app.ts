@@ -1,11 +1,15 @@
 import express from "express";
+import cors from "cors";
+
 import homeRoutes from "./routes/homeRoutes";
 import helloRoutes from "./routes/helloRoutes";
 import todoRoutes from "./routes/todoRoutes";
+
 import errorMiddleware from "./middlewares/errorMiddleware";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(homeRoutes);
 app.use(helloRoutes);
