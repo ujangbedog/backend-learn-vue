@@ -1,10 +1,12 @@
 import express from "express";
 import helloRoutes from "./routes/helloRoutes";
+import homeRoutes from "./routes/homeRoutes";
 import errorMiddleware from "./middlewares/errorMiddleware";
 
 const app = express();
 
 app.use(express.json());
+app.use(homeRoutes);
 app.use(helloRoutes);
 app.use(errorMiddleware);
 
