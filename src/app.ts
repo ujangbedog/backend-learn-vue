@@ -5,6 +5,7 @@ import homeRoutes from "./routes/homeRoutes";
 import helloRoutes from "./routes/helloRoutes";
 import todoRoutes from "./routes/todoRoutes";
 import bookRoutes from "./routes/bookRoutes";
+import orderRoutes from "./routes/orderRoutes";
 
 import errorMiddleware from "./middlewares/errorMiddleware";
 
@@ -23,6 +24,7 @@ app.use(homeRoutes);
 app.use(helloRoutes);
 app.use(todoRoutes);
 app.use(bookRoutes);
+app.use(orderRoutes);
 app.use(errorMiddleware);
 
 export default app;
